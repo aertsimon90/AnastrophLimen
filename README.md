@@ -371,3 +371,15 @@ Anastroph Limen Mathematics **begins there**.
 
 Where numbers lose meaning,
 Anastroph Limen gives them structure.
+
+---
+
+### Final Note
+
+Anastroph Limen is not part of classical mathematics and is not a standard arithmetic system.
+It belongs to metamathematics, aiming to model and reason about situations that lie outside conventional mathematical axioms.
+
+The entire system, including all definitions, rules, and operational logic, is implemented functionally inside the math.py file.
+Anyone interested can directly inspect the source code to understand how the rules are applied.
+
+Therefore, Anastroph Limen is not presented as a claim, but as an inspectable and formalized structure.
