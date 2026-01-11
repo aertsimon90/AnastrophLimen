@@ -363,6 +363,61 @@ Anastroph Limen Mathematics works because:
 
 ---
 
+## Note on Arithmetic
+
+Anastroph Limen (AL) arithmetic is **not equivalent to classical arithmetic**.  
+Although the syntax may appear similar, the underlying semantics and results are fundamentally different.
+
+### Examples
+
+In AL arithmetic:
+
+AL1 + AL1 = AL1²
+
+but
+
+AL1 * AL2 = AL3¹
+
+These two results are **not equal** and must not be interpreted using classical arithmetic rules.
+
+In classical arithmetic, addition and multiplication can sometimes produce the same result  
+(e.g. `1 + 1 = 2` and `1 * 2 = 2`).  
+This equivalence **does not apply** in the Anastroph Limen system.
+
+### Mixing AL and Classical Numbers
+
+If equivalence is required, multiplication must be performed between an **AL value and a classical number**,  
+not between two AL values.
+
+In the classical number system, multiplying by `2` means *taking two times the same quantity*.  
+Applying this interpretation:
+
+AL1 + AL1 = AL²
+AL1 * 2   = AL²
+
+Here, the results match because `2` follows **classical arithmetic semantics**, not AL semantics.
+
+### Underlying Reason
+
+AL values do **not** scale from `0` to `∞` like classical numbers.
+
+Instead, they are defined on an **inverse scale**:
+
+Classical numbers: 0 → ∞
+AL numbers:        ∞ → 0
+
+Because of this inverted structure, AL–AL operations represent  
+**structural or directional interactions**, rather than linear magnitude scaling.
+
+### Important Notes
+
+- Anastroph Limen is **not part of classical mathematics**
+- It is **non-standard** and **metamathematical**
+- Its arithmetic behavior is **intentional and foundational** to the system
+
+AL should always be treated as its **own algebraic domain**,  
+not as a variant or extension of classical arithmetic.
+
 ## Final Statement
 
 Classical mathematics ends at division by zero.
