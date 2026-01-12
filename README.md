@@ -444,3 +444,103 @@ The entire system, including all definitions, rules, and operational logic, is i
 Anyone interested can directly inspect the source code to understand how the rules are applied.
 
 Therefore, Anastroph Limen is not presented as a claim, but as an inspectable and formalized structure.
+---
+
+## CAL (Classical Anastroph Limen) Mathematics
+
+**Classical Anastroph Limen (CAL)** is the classical-mathematics–compatible form of the Anastroph Limen system.
+
+While **Anastroph Limen (AL)** defines its own arithmetic with stateful infinities,  
+**CAL preserves the behavior of classical arithmetic** while redefining infinity not as a fixed number, but as a **state**.
+
+This approach allows division by zero to be handled consistently without breaking classical computation rules.
+
+---
+
+### Core Idea
+
+In classical mathematics, infinity is treated as a single, fixed endpoint:
+
+- `1 / 0 = ∞`
+- `3 / 0 = ∞`
+- All origin information is lost.
+
+In **CAL**, infinity is not a constant value, but a **state that preserves its originating value**.
+
+Thus:
+- Infinity is no longer a limit
+- Infinity becomes a **directional mathematical state**
+
+---
+
+### Representation
+
+CAL supports two equivalent notations:
+
+1. **Meaning Notation**
+
+CALx   or   -CALx
+
+2. **Functional Notation**
+
+CAL(x)
+
+Here, **`x` is the only core value** and represents the origin of the infinite state.
+
+---
+
+### Zero Division Rules
+
+x / 0 = CAL(x)
+CAL(x) * 0 = x
+
+Zero division is no longer undefined —
+it produces a Classical Anastroph Limen state.
+
+---
+
+Arithmetic Behavior
+
+All arithmetic operations behave exactly like classical mathematics:
+
+CAL1 + CAL2 = CAL3
+CAL3 * 4 = CAL12
+CAL6 - CAL2 = CAL4
+
+CAL is therefore safe and recommended for classical numerical computations.
+
+---
+
+Real Value Interpretation
+
+Although CAL preserves internal state, its real numeric interpretation follows classical infinity rules:
+
+CAL1  =  +∞
+CAL3  =  +∞
+-CAL2 =  -∞
+
+The only difference is that CAL retains the state of infinity, not just its magnitude.
+
+---
+
+Key Distinction Between AL and CAL
+
+System	Arithmetic	Infinity	Usage
+
+AL	Custom AL arithmetic	Non-constant, stateful	Experimental / theoretical
+CAL	Classical arithmetic	Stateful infinity	Classical calculations
+
+AL has its own mathematical laws.
+
+CAL behaves exactly like classical math.
+
+CAL is recommended when compatibility with standard arithmetic is required.
+
+---
+
+Conceptual Summary
+
+> Infinity is no longer a boundary.
+It is a mathematical state.
+
+With CAL, infinity is transformed from a terminal limit into a recoverable, directional condition, allowing classical mathematics to operate safely beyond zero-division boundaries.
