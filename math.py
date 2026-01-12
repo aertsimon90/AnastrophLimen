@@ -191,7 +191,7 @@ class AL:
             return self
         else:
             return res
-
+            
     # ----------------- Helper -----------------
     @staticmethod
     def _from_data(threshold, density, sign):
@@ -199,6 +199,107 @@ class AL:
         obj.data = (threshold, density, sign)
         return obj
 
+class CAL:
+    """
+    Classical Anastroph Limen
+    Represents x / 0
+    Stores threshold (can be negative)
+    """
+
+    def __init__(self, threshold):
+        self.threshold = threshold
+
+    def __repr__(self):
+        return f"CAL({self.threshold})"
+
+    # ----------------- Classical View -----------------
+    @property
+    def real(self):
+        if self.threshold > 0:
+            return float("inf")
+        elif self.threshold < 0:
+            return float("-inf")
+        return 0.0
+
+    # ----------------- ADD -----------------
+    def __add__(self, other):
+        if isinstance(other, CAL):
+            return CAL(self.threshold + other.threshold)
+        return CAL(self.threshold + other)
+
+    __radd__ = __add__
+
+    # ----------------- SUB -----------------
+    def __sub__(self, other):
+        if isinstance(other, CAL):
+            return CAL(self.threshold - other.threshold)
+        return CAL(self.threshold - other)
+
+    def __rsub__(self, other):
+        # x - CAL(t) → opposite direction infinity
+        if self.threshold > 0:
+            return float("-inf")
+        elif self.threshold < 0:
+            return float("inf")
+        return other
+
+    # ----------------- MUL -----------------
+    def __mul__(self, other):
+        if other == 0:
+            return self.threshold
+        if isinstance(other, CAL):
+            return CAL(self.threshold * other.threshold)
+        return CAL(self.threshold * other)
+
+    __rmul__ = __mul__
+
+    # ----------------- DIV -----------------
+    def __truediv__(self, other):
+        if other == 0:
+            return CAL(self.threshold)
+        if isinstance(other, CAL):
+            return CAL(self.threshold / other.threshold)
+        return CAL(self.threshold / other)
+
+    def __rtruediv__(self, other):
+        # x / CAL(t) → 0 (sign irrelevant)
+        return 0
+
+    # ----------------- FLOOR DIV -----------------
+    def __floordiv__(self, other):
+        if isinstance(other, CAL):
+            return CAL(self.threshold // other.threshold)
+        return CAL(self.threshold // other)
+
+    def __rfloordiv__(self, other):
+        return 0
+
+    # ----------------- MOD -----------------
+    def __mod__(self, other):
+        if isinstance(other, CAL):
+            return CAL(self.threshold % other.threshold)
+        return CAL(self.threshold % other)
+
+    def __rmod__(self, other):
+        return other
+
+    # ----------------- POWER -----------------
+    def __pow__(self, other):
+        if isinstance(other, CAL):
+            return CAL(self.threshold ** other.threshold)
+        return CAL(self.threshold ** other)
+
+    def __rpow__(self, other):
+        # x ** CAL(t) → signed infinity
+        if self.threshold > 0:
+            return float("inf")
+        elif self.threshold < 0:
+            return float("-inf")
+        return 1
+
+    # ----------------- NEG -----------------
+    def __neg__(self):
+        return CAL(-self.threshold)
 
 # ----------------- Python-level zero division helper -----------------
 def safe_div(a, b):
