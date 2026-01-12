@@ -13,6 +13,12 @@ hard boundary of algebra itself.
 Anastroph Limen Mathematics does not attempt to bypass this boundary using
 infinity. Instead, it **redefines what exists beyond it**.
 
+Anastroph Limen does not treat infinity as a single constant.
+Instead, it models infinity as a non-constant, stateful quantity.
+
+Each AL value represents a distinct infinite state,
+preserving the identity of the value that crossed the zero-division boundary.
+
 ---
 
 ## The Core Problem of Division by Zero
